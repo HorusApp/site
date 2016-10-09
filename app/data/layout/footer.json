@@ -1,0 +1,41 @@
+{
+  "links": [
+      {
+        "text": "Cadastre-se",
+        "url": "#"
+      },
+      {
+        "text": "Canais",
+        "url": "#"
+      },
+      {
+        "text": "Locais",
+        "url": "#"
+      },
+      {
+        "text": "Sobre",
+        "url": "#"
+      },
+      {
+        "text": "Desenvolvedores",
+        "url": "#"
+      },
+      {
+        "text": "Carreiras",
+        "url": "#"
+      },
+      {
+        "text": "Privacidade",
+        "url": "#"
+      },
+      {
+        "text": "Termos",
+        "url": "#"
+      },
+      {
+        "text": "Ajuda",
+        "url": "#"
+      }
+  ],
+  "copyright": "HorusApp ® 2016"
+}

@@ -1,0 +1,10 @@
+mixin loadAsset( type, path )
+  - var file = path + '.' + type
+
+  if ( env === 'prod' )
+    - file = locals[ 'rev-manifest' ][ file ]
+
+  if ( type === 'css' )
+    link( rel='stylesheet' href='css/' + file )
+  else if ( type === 'js' )
+    script( src='js/' + file )

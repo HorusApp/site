@@ -1,0 +1,18 @@
+extends ../layouts/default.pug
+
+block head
+  +loadAsset( 'css', 'login' )
+
+block scripts
+  +loadAsset( 'js', 'login' )
+
+block main
+  form( class='login-form' )
+    h5
+      +icon( 'user' )
+      strong  Login
+
+    fieldset
+      input( name='email' placeholder='Email' type='email' )
+      input( name='password' placeholder='Senha' type='password' )
+      button( type='submit' ) Entrar

@@ -1,0 +1,36 @@
+@require '../setup'
+
+.site-main > .container
+  min-height 100vh
+
+h2
+  border-bottom 1px solid $white
+  margin 1.5rem 0 3rem
+
+.item
+  font-size 1.4rem
+
+  figure
+    margin 0
+    position relative
+
+  img
+    background $white
+    margin-bottom 1rem
+    display block
+    width 100%
+
+  figcaption > *
+    display block
+
+  .user-label
+    background rgba(255, 255, 255, 0.7)
+    color $black
+    padding .25rem 1rem
+    position absolute
+    bottom 0
+    left 0
+
+    .avatar
+      vertical-align middle
+

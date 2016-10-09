@@ -1,0 +1,20 @@
+{
+  "body_class": "_home",
+  "features": [
+    {
+      "icon": "video-camera",
+      "title": "Filme",
+      "text": "Transmissão ao vivo da frota durante todo percurso."
+    },
+    {
+      "icon": "cloud-upload",
+      "title": "Transmita",
+      "text": "Histórico em Cloud de todas as features."
+    },
+    {
+      "icon": "youtube-play",
+      "title": "Acompanhe",
+      "text": "Temos nossa galeria para acompanhar cada vídeo da frota !"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+div( id='sidebar', class='site-sidebar' )
+  div( class="container" )
+    a( class='logo' href='/' )
+      img( src='images/logo.svg' )
+      | HorusApp
+
+    div( class="user hidden" )
+      div( class='row' )
+        strong( class='username column column-67' ) João Silva
+
+        div( class='options column column-33' )
+          a( href='#' )
+            +icon( 'gears' )
+          a( href='#' )
+            +icon( 'sign-out' )
+
+    nav( class="sidebar-menu " )
+      input( type="search" placeholder="Buscar" class="search" )
+
+      ul( class="links" )
+        each link in sidebar.menu
+          li
+            +icon( link.icon )
+            a( href=link.url ) #{ link.text }
+
+  include footer

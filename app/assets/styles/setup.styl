@@ -1,0 +1,42 @@
+@require '../../../node_modules/normalize.css/normalize.css'
+@require '../../../vendor/milligram/milligram.css'
+@require '../../../vendor/font-awesome/css/font-awesome.css'
+@require 'colors'
+@require 'sprites'
+@require 'layout/*'
+
+/* General styles
+  =========================================================================== */
+
+*,
+*:after,
+*:before
+  box-sizing border-box
+
+body
+  color $black
+
+.logo
+  font-size 3rem
+  font-weight 500
+
+  img
+    width 4rem
+    vertical-align text-bottom
+    margin-right 1.5rem
+
+.inline-list
+  margin 0
+
+  > li
+    margin 0
+    display inline-block
+
+.inverted
+  background $black
+  color $white
+
+  a
+    color $white
+    &:hover
+      text-decoration underline

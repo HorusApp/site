@@ -1,0 +1,41 @@
+$colors = {
+  black     : #000
+  grey      : lighten( #000, 50% )
+  white     : #fff
+}
+
+$light   = {}
+$lighter = {}
+$dark    = {}
+$darker  = {}
+
+// Fill out all color shades
+for color, val in $colors
+  // Light colors
+  $light[ color ]   = lighten( val, 40% )
+  $lighter[ color ] = lighten( val, 80% )
+
+  // Dark colors
+  $dark[ color ]   = darken( val, 40% )
+  $darker[ color ] = darken( val, 80% )
+
+/* Monochromatics
+  =========================================================================== */
+
+$black        = $colors.black
+$lightBlack   = $light.black
+$lighterBlack = $lighter.black
+$darkBlack    = $dark.black
+$darkerBlack  = $darker.black
+
+$grey        = $colors.grey
+$lightGrey   = $light.grey
+$lighterGrey = $lighter.grey
+$darkGrey    = $dark.grey
+$darkerGrey  = $darker.grey
+
+$white        = $colors.white
+$lightWhite   = $light.white
+$lighterWhite = $lighter.white
+$darkWhite    = $dark.white
+$darkerWhite  = $darker.white

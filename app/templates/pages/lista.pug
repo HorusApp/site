@@ -1,0 +1,29 @@
+extends ../layouts/list.pug
+
+block head
+  +loadAsset( 'css', 'lista' )
+
+block scripts
+  +loadAsset( 'js', 'lista' )
+
+block main
+  div( class='container inverted clearfix' )
+    h2 Todos as cameras
+
+    div( class="row videos" )
+      div( class="column column-33 item")
+        a( href='/site/public/video.html' )
+          figure
+            img( src="images/video-thumb.jpg" )
+
+            span( class='user-label')
+              i( class='icon-sprites avatar' )
+              | SampaLover
+
+          figcaption
+            strong( class='title' ) Sampa na hora do rush!
+            span( class='location' ) São Paulo - Brasil
+            span( class='visualizations' )
+              +icon( 'eye' )
+              |  2334
+

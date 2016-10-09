@@ -1,0 +1,14 @@
+footer( id='footer', class='site-footer clearfix inverted' )
+  div( class='container' )
+    block footer
+
+    ul( class='links inline-list float-left' )
+      each link in footer.links
+        li
+          a( href=link.url ) #{ link.text }
+
+    span( class="float-right copyright" ) #{ footer.copyright }
+
++loadAsset( 'js', 'main' )
+
+block scripts

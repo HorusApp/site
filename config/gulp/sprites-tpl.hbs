@@ -1,0 +1,83 @@
+{{!
+  Template based on sprity-css example
+  https://github.com/sprity/sprity-css/blob/master/template/css.hbs
+
+  Yeah! It's pretty creepy, but doesn't have another way yet, sorry!
+}}
+
+/**
+ *                  ."-,.__              THIS FILE IS GENERATED
+ *                  `.     `.  ,         DON'T TOUCH IT! :)
+ *               .--'  .._,'"-' `.
+ *              .    .'         `'       ORIGINAL TEMPLATE
+ *              `.   /          ,'       /config/gulp/sprites-tpl.hbs
+ *                `  '--.   ,-"'
+ *                 `"`   |  \
+ *                    -. \, |
+ *                     `--Y.'      ___.
+ *                          \     L._, \
+ *                _.,        `.   <  <\                _
+ *              ,' '           `, `.   | \            ( `
+ *           ../, `.            `  |    .\`.           \ \_
+ *          ,' ,..  .           _.,'    ||\l            )  '".
+ *         , ,'   \           ,'.-.`-._,'  |           .  _._`.
+ *       ,' /      \ \        `' ' `--/   | \          / /   ..\
+ *     .'  /        \ .         |\__ - _ ,'` `        / /     `.`.
+ *     |  '          ..         `-...-"  |  `-'      / /        . `.
+ *     | /           |L__           |    |          / /          `. `.
+ *    , /            .   .          |    |         / /             ` `
+ *   / /          ,. ,`._ `-_       |    |  _   ,-' /               ` \
+ *  / .           \"`_/. `-_ \_,.  ,'    +-' `-'  _,        ..,-.    \`.
+ *   '         .-f    ,'   `    '.       \__.---'     _   .'   '     \ \
+ * ' /          `.'    l     .' /          \..      ,_|/   `.  ,'`     L`
+ * |'      _.-""` `.    \ _,'  `            \ `.___`.'"`-.  , |   |    | \
+ * ||    ,'      `. `.   '       _,...._        `  |    `/ '  |   '     .|
+ * ||  ,'          `. ;.,.---' ,'       `.   `.. `-'  .-' /_ .'    ;_   ||
+ * || '              V      / /           `   | `   ,'   ,' '.    !  `. ||
+ * ||/            _,-------7 '              . |  `-'    l         /    `||
+ *  |          ,' .-   ,' ||               | .-.        `.      .'     ||
+ *  `'        ,'    `".'    |               |    `.        '. -.'       `'
+ *           /      ,'      |               |,'    \-.._,.'/'
+ *           .     /        .               .       \    .''
+ *         .`.    |         `.             /         :_,'.'
+ *           \ `...\   _     ,'-.        .'         /_.-'
+ *            `-.__ `,  `'   .  _.>----''.  _  __  /
+ *                 .'        /"'          |  "'   '_
+ *                /_|.-'\ ,".             '.'`__'-( \
+ *                  / ,"'"\,'               `/  `-.|"
+ */
+
+{{#each layouts}}
+      {{! Genreal class for icons }}
+      .{{classname}}
+        text-indent 100%
+        white-space nowrap
+        overflow hidden
+        display inline-block
+        width 0
+        height 0
+
+  {{#each sprites}}
+    {{#if dpi}}
+      @media
+      only screen and ( -webkit-min-device-pixel-ratio: {{ratio}} ),
+      only screen and ( min-resolution: {{dpi}}dpi )
+        [class*='{{../../classname}}']
+          background-image url( '{{escimage url}}' )
+          background-size {{baseWidth}}px {{baseHeight}}px
+    {{/if}}
+
+    {{#unless dpi}}
+      .{{../../classname}}
+        background-image url( '{{escimage url}}' )
+    {{/unless}}
+  {{/each}}
+
+  {{! Classes for each icon found in the sprites folder }}
+  {{#each layout.items}}
+    .{{../classname}}.{{meta.name}}
+      background-position -{{baseDim x}}px -{{baseDim y}}px
+      width {{baseDim width}}px
+      height {{baseDim height}}px
+  {{/each}}
+{{/each}}

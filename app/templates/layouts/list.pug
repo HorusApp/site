@@ -1,0 +1,17 @@
+include ../components/components
+
+doctype html
+html
+  head
+    include ../partials/head
+
+    script.
+      window.ENV = '#{ env }';
+
+    body( class=body_class )
+      div( class='row' )
+        div( class='column column-20' )
+          include ../partials/sidebar
+
+        div( class='column column-80' )
+          include ../partials/main

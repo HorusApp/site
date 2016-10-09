@@ -1,0 +1,14 @@
+include ../components/components
+
+doctype html
+html
+  head
+    include ../partials/head
+
+    script.
+      window.ENV = '#{ env }';
+
+    body( class=body_class )
+      include ../partials/header
+      include ../partials/main
+      include ../partials/footer

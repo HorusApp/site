@@ -1,0 +1,62 @@
+extends ../layouts/default.pug
+
+block head
+  +loadAsset( 'css', 'index' )
+
+block scripts
+  +loadAsset( 'js', 'index' )
+
+block main
+  div( class='inverted' )
+    div( class='container' )
+      div( class='row' )
+        div( class='video column column-67' )
+          video( controls muted autoplay )
+            source( src='../app/assets/videos/video.mp4' type='video/mp4' )
+
+        div( class='register-form column column-33' )
+          form
+            h5
+              strong Novo no HorusApp?
+              |  Cadastre-se
+
+            fieldset
+              input( name='name' placeholder='Nome completo' type='text' )
+              input( name='email' placeholder='Email' type='email' )
+              input( name='password' placeholder='Senha' type='password' )
+              button( type='submit' ) Cadastrar
+
+  div( class='container' )
+    div( class='features' )
+      div( class='row' )
+        each feature in features
+          div( class='column' )
+            h4
+              +icon( feature.icon )
+              | #{ feature.title }
+
+            p #{ feature.text }
+
+  div( class='inverted follow-us' )
+    div( class='container clearfix' )
+      h3( class='float-left') Acompanhe o HorusApp também nas redes sociais
+      div( class='float-right social-media' )
+        a( href='https://www.facebook.com/appHorus/' target='_blank') Facebook
+        |  /
+        a( href='#' target='_blank')  Twitter
+        |  /
+        a( href='#' target='_blank')  Instagram
+
+
+  div( class='container' )
+    div( class='downloads' )
+      div( class='row' )
+        div( class='column column-80' )
+          img( src='images/logo.svg' class='logo' )
+          div( class="text" )
+            h2 HorusApp
+            div Disponível para download grátis nas plataformas Android e iOS
+
+        div( class='column column-20 stores' )
+          i( class='icon-sprites download-android' )
+          i( class='icon-sprites download-apple' )

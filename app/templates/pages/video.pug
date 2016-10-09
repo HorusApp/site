@@ -1,0 +1,12 @@
+extends ../layouts/list.pug
+
+block head
+  +loadAsset( 'css', 'video' )
+
+block main
+  div( class='container inverted clearfix' )
+    h2 Sampa na hora do rush!
+
+    div( class='video' )
+      video( controls autoplay )
+        source( src='../app/assets/videos/video.mp4' type='video/mp4' )

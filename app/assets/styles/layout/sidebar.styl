@@ -1,0 +1,51 @@
+/*! Sidebar
+  =========================================================================== */
+
+.site-sidebar
+  position fixed
+  height 100%
+
+  .logo
+    display block
+    margin 1.5rem 0 3rem
+
+  .user
+    margin-bottom 2rem
+
+    .options
+      text-align right
+
+    .options a
+      margin-right .75rem
+
+  .sidebar-menu
+    .search
+      margin-bottom 2rem
+
+    .links
+      margin 0
+      list-style none
+
+    .links .icon
+      margin-right 1rem
+
+  // TODO: move it out of here
+  // it's too hacky
+  .site-footer
+    position absolute
+    bottom 0
+    width 100%
+    background transparent
+    color $black
+    text-align center
+
+    a
+      color $black
+
+    .copyright
+      font-weight bold
+      display block
+      margin 2rem 0
+
+    .container > *
+      float none

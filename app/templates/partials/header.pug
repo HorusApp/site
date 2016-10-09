@@ -1,0 +1,18 @@
+header( id='header', class='site-header' )
+  div( class="container clearfix" )
+    a( class='logo float-left' href='/' )
+      img( src='images/logo.svg' )
+      | HorusApp
+
+    nav( class="site-menu float-right" )
+      input( type="search" placeholder="Buscar" class="search" )
+
+      div( class="links" )
+        span
+          a( href="/site/public/lista.html" ) Navegar
+        span
+          a( href="#" ) Download
+
+      a( href="/site/public/login.html" class="button login" ) Login
+
+  block header

@@ -1,0 +1,34 @@
+{
+  "menu": [
+    {
+      "icon": "user",
+      "text": "Perfil",
+      "url": "#"
+    },
+    {
+      "icon": "heart",
+      "text": "Favoritos",
+      "url": "#"
+    },
+    {
+      "icon": "fire",
+      "text": "Mais vistos",
+      "url": "#"
+    },
+    {
+      "icon": "youtube-play",
+      "text": "Playlists",
+      "url": "#"
+    },
+    {
+      "icon": "television",
+      "text": "Canais",
+      "url": "#"
+    },
+    {
+      "icon": "mobile",
+      "text": "Streamers",
+      "url": "#"
+    }
+  ]
+}
